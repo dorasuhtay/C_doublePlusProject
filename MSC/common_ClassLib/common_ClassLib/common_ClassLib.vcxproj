@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{60BDD12F-4D37-41F9-A586-41AF6526AB66}</ProjectGuid>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>common_ClassLib</RootNamespace>
+    <ProjectName>common_ClassLib</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\..\..\Common\computer;..\..\..\Common\socket;..\..\..\Common\list;..\..\..\Common\os;..\..\..\Common\clib;..\..\..\Common\protocol;..\..\..\Common\file;..\..\..\Common\string;..\..\..\Common\fifo;..\..\..\Common\MSC\tcp;..\..\..\Common\tcp;..\..\tcp;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\..\..\Common\computer;..\..\..\Common\socket;..\..\..\Common\MSC\tcp;..\..\..\Common\list;..\..\..\Common\os;..\..\..\Common\clib;..\..\..\Common\protocol;..\..\..\Common\file;..\..\..\Common\string;..\..\..\Common\fifo;..\..\..\Common\tcp;..\..\tcp;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Common\clib\numberConversion.h" />
+    <ClInclude Include="..\..\..\Common\computer\computerhardware.h" />
+    <ClInclude Include="..\..\..\Common\fifo\lcircbuf.h" />
+    <ClInclude Include="..\..\..\Common\file\iniprofile.h" />
+    <ClInclude Include="..\..\..\Common\os\registry.h" />
+    <ClInclude Include="..\..\..\Common\protocol\CRCCCITT.H" />
+    <ClInclude Include="..\..\..\Common\protocol\mrt_X01netc.h" />
+    <ClInclude Include="..\..\..\Common\socket\isocket.h" />
+    <ClInclude Include="..\..\..\Common\socket\socketfunction.h" />
+    <ClInclude Include="..\..\..\Common\string\stringconversion.h" />
+    <ClInclude Include="..\..\..\Common\string\wctString.h" />
+    <ClInclude Include="..\..\..\Common\string\wctStringFifo.h" />
+    <ClInclude Include="..\..\..\Common\string\wctStringList.h" />
+    <ClInclude Include="..\..\..\Common\tcp\tcpCommon.h" />
+    <ClInclude Include="class_HostnameMRTonline.h" />
+    <ClInclude Include="class_SQLfunc.h">
+      <FileType>CppClass</FileType>
+    </ClInclude>
+    <ClInclude Include="class_TCPclient.h">
+      <FileType>CppClass</FileType>
+    </ClInclude>
+    <ClInclude Include="class_TCPserver.h">
+      <FileType>CppClass</FileType>
+    </ClInclude>
+    <ClInclude Include="class_TCPsocket.h">
+      <FileType>CppClass</FileType>
+    </ClInclude>
+    <ClInclude Include="common_ClassLib.h" />
+    <ClInclude Include="dlg_accessibilityPasswordDialog.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="class_childWindow.h">
+      <FileType>CppClass</FileType>
+    </ClInclude>
+    <ClInclude Include="class_TCPsocketList.h">
+      <FileType>CppClass</FileType>
+    </ClInclude>
+    <ClInclude Include="dlg_RichEditTerminalSetting.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="form_debugTerminal.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="form_HostnameMRTonline.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="form_RichEditTerminal.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="form_TCPsocketStatus.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ModelessMessageBox.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="popUpMsgWindow.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SQLfunc_common.h" />
+    <ClInclude Include="Stdafx.h" />
+    <ClInclude Include="SyntaxColoring_array.h" />
+    <ClInclude Include="tcpClientTerminal.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="tcpSocketTerminal.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common\clib\numberConversion.CPP" />
+    <ClCompile Include="..\..\..\Common\computer\computerhardware.cpp" />
+    <ClCompile Include="..\..\..\Common\fifo\lcircbuf.cpp" />
+    <ClCompile Include="..\..\..\Common\file\class_processError.cpp" />
+    <ClCompile Include="..\..\..\Common\file\iniprofile.cpp" />
+    <ClCompile Include="..\..\..\Common\os\registry.cpp" />
+    <ClCompile Include="..\..\..\Common\protocol\CRCCCITT.CPP" />
+    <ClCompile Include="..\..\..\Common\protocol\mrt_X01netc.cpp" />
+    <ClCompile Include="..\..\..\Common\socket\isocket.cpp" />
+    <ClCompile Include="..\..\..\Common\socket\socketfunction.cpp" />
+    <ClCompile Include="..\..\..\Common\string\stringconversion.cpp" />
+    <ClCompile Include="..\..\..\Common\string\wctString.cpp" />
+    <ClCompile Include="..\..\..\Common\string\wctStringFifo.cpp" />
+    <ClCompile Include="..\..\..\Common\string\wctStringList.cpp" />
+    <ClCompile Include="..\..\..\Common\tcp\tcpCommon.cpp" />
+    <ClCompile Include="class_HostnameMRTonline.cpp" />
+    <ClCompile Include="class_SQLfunc.cpp" />
+    <ClCompile Include="class_TCPclient.cpp" />
+    <ClCompile Include="class_TCPserver.cpp" />
+    <ClCompile Include="class_TCPsocket.cpp" />
+    <ClCompile Include="common_ClassLib.cpp" />
+    <ClCompile Include="dlg_accessibilityPasswordDialog.cpp" />
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="class_childWindow.cpp" />
+    <ClCompile Include="class_TCPsocketList.cpp" />
+    <ClCompile Include="dlg_RichEditTerminalSetting.cpp" />
+    <ClCompile Include="form_debugTerminal.cpp" />
+    <ClCompile Include="form_HostnameMRTonline.cpp" />
+    <ClCompile Include="form_RichEditTerminal.cpp" />
+    <ClCompile Include="form_TCPsocketStatus.cpp" />
+    <ClCompile Include="ModelessMessageBox.cpp" />
+    <ClCompile Include="popUpMsgWindow.cpp" />
+    <ClCompile Include="SQLfunc_common.cpp" />
+    <ClCompile Include="Stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SyntaxColoring_array.cpp" />
+    <ClCompile Include="tcpClientTerminal.cpp" />
+    <ClCompile Include="tcpSocketTerminal.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.ico" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dlg_accessibilityPasswordDialog.resx">
+      <DependentUpon>dlg_accessibilityPasswordDialog.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlg_RichEditTerminalSetting.resx">
+      <DependentUpon>dlg_RichEditTerminalSetting.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_debugTerminal.resx">
+      <DependentUpon>form_debugTerminal.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_HostnameMRTonline.resx">
+      <DependentUpon>form_HostnameMRTonline.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_RichEditTerminal.resx">
+      <DependentUpon>form_RichEditTerminal.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_TCPsocketStatus.resx">
+      <DependentUpon>form_TCPsocketStatus.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelessMessageBox.resx">
+      <DependentUpon>ModelessMessageBox.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="popUpMsgWindow.resx">
+      <DependentUpon>popUpMsgWindow.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tcpClientTerminal.resx">
+      <DependentUpon>tcpClientTerminal.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tcpSocketTerminal.resx">
+      <DependentUpon>tcpSocketTerminal.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
