@@ -1,4 +1,4 @@
-# Project Title: Real time microcontroller with VC++/C++
+# Project Title: Real time microcontroller(C) with VC++ and RS232
 ## 📌 Overview
 This project demonstrates a C++-based control system that bridges application software with embedded hardware. Developed primarily in Visual C++ (VC++), the system communicates with a Microsoft SQL Server and manages real-time hardware interactions through a master-slave PCB setup.
 
