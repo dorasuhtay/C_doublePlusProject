@@ -5,24 +5,24 @@ This project demonstrates a C++-based control system that bridges application so
 ![Image](https://github.com/user-attachments/assets/edfed45a-aea8-4404-a782-3c9f2e72c75c)
 
 ## 🎯 Key Features
-Real-time hardware control using VC++
+- Real-time hardware control using VC++
 
-Master PCB supports communication with up to 128 slave devices
+- Master PCB supports communication with up to 128 slave devices
 
-Each slave handles various modules: I/O, sensors, and LCD displays
+- Each slave handles various modules: I/O, sensors, and LCD displays
 
-Data exchange between VC++ and Java via socket communication
+- Data exchange between VC++ and Java via socket communication
 
-Database interaction using MSSQL for data logging and queries
+- Database interaction using MSSQL for data logging and queries
 
 ## 💡 Example Use Cases
-Industrial automation and control systems
+- Industrial automation and control systems
 
-Real-time sensor data acquisition and monitoring
+- Real-time sensor data acquisition and monitoring
 
-Smart I/O and device management
+- Smart I/O and device management
 
-Embedded user interface with LCD feedback
+- Embedded user interface with LCD feedback
 
 ## 👨‍💻 About Me
 I'm passionate about C++ development, embedded systems, automation, and AI.
