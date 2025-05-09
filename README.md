@@ -2,7 +2,7 @@
 ## 📌 Overview
 This project demonstrates a C++-based control system that bridges application software with embedded hardware. Developed primarily in Visual C++ (VC++), the system communicates with a Microsoft SQL Server and manages real-time hardware interactions through a master-slave PCB setup.
 
-![Image](https://github.com/user-attachments/assets/d0a59dbc-1b31-4607-b621-58dcc420fec8)
+![Image](https://github.com/user-attachments/assets/edfed45a-aea8-4404-a782-3c9f2e72c75c)
 
 
 ## 🎯 Key Features
